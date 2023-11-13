@@ -2,6 +2,17 @@
 
 echo " Welcome to the new menu for building application"
 
+menu(){
+
+echo "1.Creacion de directorio"
+ echo "2.Calculadora de multiplicacion"
+ echo "3.Monitoreo de servidor web"
+ echo "4.Copia de archivos"
+ echo "5.Salir"
+
+}
+
+
 tarea_1(){
          read -p "Porfavor ingrese el nombre del directorio: " nombre
 	 if [ -d "$nombre" ]
@@ -40,11 +51,7 @@ fi
 
 while true 
 do 
- echo "1.Creacion de directorio" 
- echo "2.Calculadora de multiplicacion"
- echo "3.Monitoreo de servidor web"
- echo "4.Copia de archivos"
- echo "5.Salir"
+ menu
  read -p "Porfavor escoga una opción: " opcion
  case $opcion in
 	 1)
