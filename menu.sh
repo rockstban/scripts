@@ -15,6 +15,29 @@ tarea_1(){
 
 }
 
+tarea_2(){
+
+	echo " Bienvenido a la calculadora de multiplicaciones"
+	read -p "Porfavor ingresa tu primer numero: " n1
+	read -p " Porfacor ingresa el segundo numero " n2
+	total= "$n1"*"$n2"
+	echo "El resultado es $total"
+
+}
+tarea_3(){
+echo " Vamos a monitorear el servidor"
+read -p "Ingresa la direccion que quieres comprobar: " url
+respuesta=$(curl -Is "$url" | head -n 1 | awk '{print$2}')
+if [ "$respuesta" != "200" ]
+ then 
+   echo "El sitio no esta respondiendo"
+else 
+  echo " Todo esta bien"
+fi
+
+}
+
+
 while true 
 do 
  echo "1.Creacion de directorio" 
